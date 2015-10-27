@@ -72,8 +72,6 @@ public class HandWrite extends View{
         switch (event.getAction()){
             case MotionEvent.ACTION_DOWN:
                 isMove = false;
-                startX = event.getX();
-                startY = event.getY();
                 invalidate();
                 return true;
             case MotionEvent.ACTION_MOVE:

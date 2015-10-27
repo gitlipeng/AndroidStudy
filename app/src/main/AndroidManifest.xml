@@ -16,7 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HandViewActivity" android:label="图片处理"></activity>
+        <activity android:name=".ImageActivity" android:label="图片处理"></activity>
+        <activity android:name=".imagetest.HandViewActivity"></activity>
+        <activity android:name=".imagetest.RoundConcerActivity"></activity>
+
+
         <activity android:name=".IntentTestActivity" android:label="Intent探索"></activity>
 
     </application>

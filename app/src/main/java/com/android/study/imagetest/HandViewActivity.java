@@ -1,8 +1,9 @@
-package com.android.study;
+package com.android.study.imagetest;
 
 import android.app.Activity;
 import android.os.Bundle;
 
+import com.android.study.R;
 import com.android.study.widget.HandWrite;
 
 /**

@@ -58,7 +58,7 @@ public class MainActivity extends Activity implements ListView.OnItemClickListen
                 PackageInfo packageInfo = context.getPackageManager().getPackageInfo(context.getPackageName(), 1);
                 ActivityInfo[] activityInfos = packageInfo.activities;
                 for (ActivityInfo activityInfo : activityInfos) {
-                    if (activityInfo.name.contains(MainActivity.class.getName()) && TextUtils.isEmpty(activityInfo.nonLocalizedLabel)) {
+                    if (activityInfo.name.contains(MainActivity.class.getName()) || TextUtils.isEmpty(activityInfo.nonLocalizedLabel)) {
                         continue;
                     }
                     addItem(activityInfo);
