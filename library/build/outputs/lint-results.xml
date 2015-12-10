@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="4" by="lint 24.4.1">
+
+    <issue
+        id="UnusedAttribute"
+        severity="Warning"
+        message="Attribute `allowBackup` is only used in API level 4 and higher (current min is 1)"
+        category="Correctness"
+        priority="6"
+        summary="Attribute unused on older versions"
+        explanation="This check finds attributes set in XML files that were introduced in a version newer than the oldest version targeted by your application (with the `minSdkVersion` attribute).
+
+This is not an error; the application will simply ignore the attribute. However, if the attribute is important to the appearance of functionality of your application, you should consider finding an alternative way to achieve the same result with only available attributes, and then you can optionally create a copy of the layout in a layout-vNN folder which will be used on API NN or higher where you can take advantage of the newer attribute.
+
+Note: This check does not only apply to attributes. For example, some tags can be unused too, such as the new `&lt;tag>` element in layouts introduced in API 21."
+        errorLine1="    &lt;application android:allowBackup=&quot;false&quot; android:label=&quot;@string/app_name&quot;"
+        errorLine2="                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\workspace\androidstudio-workspace\AndroidStudy\library\src\main\AndroidManifest.xml"
+            line="3"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="GoogleAppIndexingWarning"
+        severity="Warning"
+        message="App is not indexable by Google Search; consider adding at least one Activity with an ACTION-VIEW intent-filler. See issue explanation for more details."
+        category="Usability"
+        priority="5"
+        summary="Missing support for Google App Indexing"
+        explanation="Adds deep links to get your app into the Google index, to get installs and traffic to your app from Google Search."
+        url="https://g.co/AppIndexing/AndroidStudio"
+        urls="https://g.co/AppIndexing/AndroidStudio"
+        errorLine1="    &lt;application android:allowBackup=&quot;false&quot; android:label=&quot;@string/app_name&quot;"
+        errorLine2="    ^">
+        <location
+            file="D:\workspace\androidstudio-workspace\AndroidStudy\library\src\main\AndroidManifest.xml"
+            line="3"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="RtlEnabled"
+        severity="Warning"
+        message="You must set `android:targetSdkVersion` to at least 17 when enabling RTL support (is -1)"
+        category="Bi-directional Text"
+        priority="3"
+        summary="Using RTL attributes without enabling RTL support"
+        explanation="To enable right-to-left support, when running on API 17 and higher, you must set the `android:supportsRtl` attribute in the manifest `&lt;application>` element.
+
+If you have started adding RTL attributes, but have not yet finished the migration, you can set the attribute to false to satisfy this lint check."
+        errorLine1="        android:supportsRtl=&quot;true&quot;>"
+        errorLine2="                             ~~~~">
+        <location
+            file="D:\workspace\androidstudio-workspace\AndroidStudy\library\src\main\AndroidManifest.xml"
+            line="4"
+            column="30"/>
+    </issue>
+
+</issues>
